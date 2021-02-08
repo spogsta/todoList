@@ -27,8 +27,8 @@ function newTodo(title, date, time, description, complete){
     displayTodoList();
 }
 
-newTodo("Take the hobbits to isengard", "12/12/1212", "we're taking the hobbits to isengard", true);
-newTodo("play that funky music", "12/12/1212", "play that funky music whiiiteee", true);
+newTodo("Take the hobbits to isengard", "12/12/1212", "12:00", "we're taking the hobbits to isengard", true);
+newTodo("play that funky music", "12/12/1212", "12:00", "play that funky music whiiiteee", true);
 
 console.log(projectList[currentProject]);
 
@@ -53,17 +53,17 @@ function displayTodoList(){
         tdDescription.appendChild(document.createTextNode(projectList[currentProject][i].description));
         tdComplete.appendChild(document.createTextNode(projectList[currentProject][i].complete));
 
-       let tableIndex = projectList[currentProject][i];
+       let tableIndex = i;
        
         let btn = document.createElement("BUTTON");
         btn.innerHTML = "clear table row";
         btn.addEventListener("click", function () {
-            library.splice(tableIndex, 1);
+            todoList.splice(tableIndex, 1);
             displayTodoList();
 
            
         })
-        tdDelete.appendChild(document.createTextNode(projectList[currentProject][i])).delete
+        tdDelete.appendChild(btn);
 
 
         tr.appendChild(tdTitle);
