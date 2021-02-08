@@ -17,7 +17,7 @@ class Todo {
 };
 
 function adTodo(x){
-    todoList.push(x);
+    projectList[currentProject].push(x);
     displayTodoList();
 }
 
@@ -31,6 +31,9 @@ newTodo("Take the hobbits to isengard", "12/12/1212", "12:00", "we're taking the
 newTodo("play that funky music", "12/12/1212", "12:00", "play that funky music whiiiteee", true);
 
 console.log(projectList[currentProject]);
+
+
+
 
 
 
@@ -94,6 +97,20 @@ function formSubmit(){
 
 
 }
+ 
+function newProject(){
+    let a = [];
+    projectList.push(a);
+}
+
+function selectProject(a){
+    currentProject=a;
+    displayTodoList();
+}
+
+
+
+
 
 // Get the modal
 var modal = document.getElementById("myModal");
