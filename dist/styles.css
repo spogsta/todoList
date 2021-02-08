@@ -28,3 +28,37 @@
     font-size: 28px;
     font-weight: bold;
   }
+
+  #table{
+    margin-left: auto;
+    margin-right: auto;
+    border: solid black 1px;
+  }
+  
+  td{
+    border: solid black 1px;
+  }
+
+  #submissionZone{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    
+    border: solid black 1px;
+  }
+
+  #myBtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid black 1px;
+  }
+
+  .submissionZoneContent{
+    padding-right: 0;
+  }

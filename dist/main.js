@@ -6,6 +6,7 @@ let table=document.getElementById("table");
 
 
 
+
 class Todo {
     constructor(title, date, time, description, complete){
         this.title = title;
@@ -110,7 +111,13 @@ function selectProject(){
     displayTodoList();
 }
 
+function setStorage(){
+    localStorage.setItem("key", [projectList]);
+}
 
+function getStorage(){
+    localStorage.getItem("key");
+}
 
 
 

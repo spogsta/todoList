@@ -10,12 +10,16 @@
     <div id="content">
         <table id="table"></table>
 
-    </div>
+        <br>
 
-    <button id="newProject" onclick="newProject()">new project</button>
-    <label for="selectProject">input project number</label>
-    <input type="number" id="selectProject" name="selectProject" value="" min="0" max="0">
-    <button onclick="selectProject()">submit project select</button>
+    
+        <div id="submissionZone">
+            <button id="newProject" onclick="newProject()" class="submissionZoneContent">new project</button>
+            <label for="selectProject" class="submissionZoneContent">input project number</label>
+            <input type="number" id="selectProject" name="selectProject" value="" min="0" max="0" class="submissionZoneContent">
+            <button onclick="selectProject()" class="submissionZoneContent">submit project select</button>
+        </div>
+    </div>
 
 
     <!-- Trigger/Open The Modal -->
