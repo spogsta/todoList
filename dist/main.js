@@ -61,7 +61,7 @@ function displayTodoList(){
         let btn = document.createElement("BUTTON");
         btn.innerHTML = "clear table row";
         btn.addEventListener("click", function () {
-            todoList.splice(tableIndex, 1);
+            projectList[currentProject].splice(tableIndex, 1);
             displayTodoList();
 
            
@@ -101,9 +101,11 @@ function formSubmit(){
 function newProject(){
     let a = [];
     projectList.push(a);
+    document.getElementById("selectProject").max=projectList.length-1;
 }
 
-function selectProject(a){
+function selectProject(){
+    let a = document.getElementById("selectProject").value;
     currentProject=a;
     displayTodoList();
 }
