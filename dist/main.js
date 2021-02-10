@@ -146,3 +146,15 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 } 
+
+
+function storeTodo() {
+    let storeTodoList = projectList[currentProject];
+    localStorage["storeTodoList"]=JSON.stringify(storeTodoList);
+}
+let retrievedTodoList = [];
+function retrieveTodo (){
+    retrievedTodoList = JSON.parse(localStorage["storeTodoList"]);
+    projectList[currentProject]=retrievedTodoList;
+    displayTodoList();
+}
